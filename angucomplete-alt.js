@@ -498,6 +498,7 @@ angular.module('angucomplete-alt', [] ).directive('angucompleteAlt', ['$q', '$pa
       // register events
       inputField.on('keydown', keydownHandler);
       inputField.on('keyup', keyupHandler);
+      inputField.on('blur', handleOverrideSuggestions);
 
       // set response formatter
       responseFormatter = callFunctionOrIdentity('remoteUrlResponseFormatter');
